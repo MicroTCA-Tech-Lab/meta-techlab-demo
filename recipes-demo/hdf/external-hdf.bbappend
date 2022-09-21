@@ -1,11 +1,3 @@
-DESCRIPTION = "Recipe to copy externally built HDF to deploy"
-
-LICENSE = "CLOSED"
-
-PROVIDES = "virtual/hdf"
-
-inherit deploy
-
 HDF_BASE = "file://"
 HDF_PATH_damc-fmc2zup = "damc_fmc2zup_top.xsa"
 HDF_PATH_damc-fmc1z7io = "damc_fmc1z7io_top.xsa"
