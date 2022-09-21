@@ -1,4 +1,4 @@
-from HwAccessAarch32 import HwAccessAarch64
+from HwAccessAarch64 import HwAccessAarch64
 
 CLK_NAMES = {
     0: "PCIe",
