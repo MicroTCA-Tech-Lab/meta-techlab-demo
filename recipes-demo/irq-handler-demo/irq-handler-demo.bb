@@ -5,8 +5,14 @@ LICENSE = "CLOSED"
 PV = "1.0"
 PR = "r1"
 
-SRC_URI = "file://irq-handler-demo_v${PV}.tar.gz"
-S = "${WORKDIR}/software"
+SRC_URI = "                       \
+  file://custom_irq_gen.c         \
+  file://custom_irq_gen.h         \
+  file://custom_irq_gen_regs.h    \
+  file://irq_handler_demo.c       \
+  file://Makefile                 \
+"
+S = "${WORKDIR}"
 
 FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 

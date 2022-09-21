@@ -1,0 +1,52 @@
+/* This file was automatically generated with HECTARE
+ *
+ * DO NOT EDIT
+ *
+ *   input_filename = custom_irq_gen.rdl
+ */
+
+#pragma once
+
+// address constants
+#define CUSTOM_IRQ_GEN_ADDR_REG_ID (0)
+#define CUSTOM_IRQ_GEN_ADDR_REG_VER (4)
+#define CUSTOM_IRQ_GEN_ADDR_REG_GEN_EN (16)
+#define CUSTOM_IRQ_GEN_ADDR_REG_CLR_IRQ (20)
+#define CUSTOM_IRQ_GEN_ADDR_REG_GEN_PERIOD (24)
+#define CUSTOM_IRQ_GEN_ADDR_REG_IRQ_SEQ (28)
+#define CUSTOM_IRQ_GEN_ADDR_REG_HANDLER_LATENCY (32)
+
+// reset values
+#define CUSTOM_IRQ_GEN_REG_ID_ID_RST_VAL (0xc0570319)
+
+#define CUSTOM_IRQ_GEN_REG_VER_VER_RST_VAL (0x10200)
+
+// individual field shift
+#define CUSTOM_IRQ_GEN_REG_ID_ID_SHIFT (0)
+
+#define CUSTOM_IRQ_GEN_REG_VER_VER_SHIFT (0)
+
+#define CUSTOM_IRQ_GEN_REG_GEN_EN_GEN_EN_SHIFT (0)
+
+#define CUSTOM_IRQ_GEN_REG_CLR_IRQ_CLR_IRQ_SHIFT (0)
+
+#define CUSTOM_IRQ_GEN_REG_GEN_PERIOD_PERIOD_SHIFT (0)
+
+#define CUSTOM_IRQ_GEN_REG_IRQ_SEQ_SEQ_SHIFT (0)
+
+#define CUSTOM_IRQ_GEN_REG_HANDLER_LATENCY_CYCLES_SHIFT (0)
+
+// individual field mask
+#define CUSTOM_IRQ_GEN_REG_ID_ID_MASK (0xffffffff)
+
+#define CUSTOM_IRQ_GEN_REG_VER_VER_MASK (0xffffffff)
+
+#define CUSTOM_IRQ_GEN_REG_GEN_EN_GEN_EN_MASK (0x1)
+
+#define CUSTOM_IRQ_GEN_REG_CLR_IRQ_CLR_IRQ_MASK (0x1)
+
+#define CUSTOM_IRQ_GEN_REG_GEN_PERIOD_PERIOD_MASK (0xffffff)
+
+#define CUSTOM_IRQ_GEN_REG_IRQ_SEQ_SEQ_MASK (0xffffffff)
+
+#define CUSTOM_IRQ_GEN_REG_HANDLER_LATENCY_CYCLES_MASK (0xffffffff)
