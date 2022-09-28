@@ -16,10 +16,9 @@ SRC_URI = " \
 
 RDEPENDS_${PN} = "python3"
 
-FILES_${PN} = "/opt/mtca-tech-lab/${MACHINE}/clock-monitor/"
+FILES_${PN} = "${TECHLAB_BOARD_DIR}/clock-monitor/"
 
 do_install() {
-    install -d ${D}/opt
-    install -d ${D}/opt/mtca-tech-lab/${MACHINE}/clock-monitor/
-    cp -r ${WORKDIR}/*.py ${D}/opt/mtca-tech-lab/${MACHINE}/clock-monitor/
+    install -d ${D}${TECHLAB_BOARD_DIR}/clock-monitor/
+    cp -r ${WORKDIR}/*.py ${D}${TECHLAB_BOARD_DIR}/clock-monitor/
 }

@@ -17,11 +17,11 @@ S = "${WORKDIR}"
 FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 
 do_install_append() {
-    install -d ${D}${base_prefix}/opt/mtca-tech-lab/${MACHINE}/irq-handler-demo/
-    install -m 0755 ${S}/irq_handler_demo  ${D}${base_prefix}/opt/mtca-tech-lab/${MACHINE}/irq-handler-demo/
+    install -d ${D}${base_prefix}${TECHLAB_BOARD_DIR}/irq-handler-demo/
+    install -m 0755 ${S}/irq_handler_demo  ${D}${base_prefix}${TECHLAB_BOARD_DIR}/irq-handler-demo/
 }
 
 FILES_${PN} = "\
-  /opt/mtca-tech-lab/${MACHINE}/irq-handler-demo \
-  /opt/mtca-tech-lab/${MACHINE}/irq-handler-demo/irq_handler_demo \
+  ${TECHLAB_BOARD_DIR}/irq-handler-demo \
+  ${TECHLAB_BOARD_DIR}/irq-handler-demo/irq_handler_demo \
 "
