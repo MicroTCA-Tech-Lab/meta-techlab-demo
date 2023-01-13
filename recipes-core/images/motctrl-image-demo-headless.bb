@@ -3,4 +3,4 @@ DESCRIPTION = "DAMC-MOTCTRL Headless Linux Image"
 IMAGE_AUTOLOGIN = "0"
 
 require recipes-core/images/techlab-headless.inc
-require recipes-core/images/techlab-common.inc
+require motctrl-demo.inc
