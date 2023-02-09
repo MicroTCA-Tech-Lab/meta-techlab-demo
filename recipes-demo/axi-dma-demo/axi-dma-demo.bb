@@ -8,7 +8,7 @@ PR = "r0"
 DEPENDS = "boost libudmaio"
 RDEPENDS_${PN} = "boost-log boost-program-options libudmaio"
 
-inherit pkgconfig cmake
+inherit pkgconfig cmake update-rc.d
 
 SRCREV = "64b447901b0d37bf546b283ebe68fa104e137685"
 SRC_URI = "git://github.com/MicroTCA-Tech-Lab/libudmaio.git;protocol=https"
@@ -19,8 +19,24 @@ EXTRA_OECMAKE_damc-fmc1z7io = "-DCMAKE_SKIP_RPATH=TRUE -DTARGET_HW=Z7IO"
 
 S="${WORKDIR}/git"
 
+FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
+SRC_URI_append = "            \
+    file://init.d/udmabuf     \
+"
+
+FILES_${PN}_append = "               \
+    /etc/init.d/udmabuf              \
+"
+
+INITSCRIPT_NAME = "udmabuf"
+INITSCRIPT_PARAMS = "defaults 90"
+
 do_install() {
-    # example
+    # Example application
     install -d ${D}${bindir}
     install -m 0755 axi_dma_demo_cpp ${D}${bindir}
+
+    # UDmaBuf allocation
+    install -d ${D}${sysconfdir}/init.d
+    install -m 0755 ${WORKDIR}/init.d/udmabuf ${D}${sysconfdir}/init.d/
 }

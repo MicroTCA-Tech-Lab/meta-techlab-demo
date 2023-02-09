@@ -1,0 +1,33 @@
+### BEGIN INIT INFO
+# Provides:          udmabuf
+# Required-Start:    
+# Required-Stop:     
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: udmabuf buffer allocation
+# Description:       Allocate udmabuf buffer for application
+### END INIT INFO
+
+UDMA_BUFMGR="/dev/u-dma-buf-mgr"
+
+# 16 MiB buffer for axi-dma-demo
+UDMA_BUFNAME="udmabuf0"
+UDMA_BUFSIZE="0x01000000"
+UDMA_APPNAME="axi-dma-demo"
+
+case "$1" in
+  start)
+    echo -n "udmabuf: Create buffer for axi-dma-demo"
+    echo "create ${UDMA_BUFNAME} ${UDMA_BUFSIZE}" > ${UDMA_BUFMGR}
+    ;;
+  stop)
+    echo -n "udmabuf: Delete buffer for axi-dma-demo"
+    echo "delete ${UDMA_BUFNAME}" > ${UDMA_BUFMGR}
+    ;;
+  *)
+    echo "Usage: $0 {start|stop}"
+    exit 1
+    ;;
+esac
+
+exit 0
