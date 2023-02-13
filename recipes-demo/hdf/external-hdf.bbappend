@@ -21,6 +21,8 @@ HDF_PATH_damc-fmc1z7io = "damc_fmc1z7io_top.xsa"
 HDF_PATH_damc-motctrl = "design_1_wrapper.xsa"
 
 S = "${WORKDIR}"
-SRC_URI += " file://*"
+
+# Use a HDF_PATH file in every PL_VARIANTS directory
+SRC_URI = "${@' '.join('file://' + os.path.join(f, d.getVar('HDF_PATH')) for f in d.getVar('PL_VARIANTS').split(' '))}"
 
 FILESEXTRAPATHS_prepend := "${THISDIR}/${MACHINE}:"
