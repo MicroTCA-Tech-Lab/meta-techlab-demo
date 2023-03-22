@@ -18,7 +18,7 @@ PL_DEFAULT_VARIANT_damc-motctrl = "test"
 HDF_BASE = "file://${PL_DEFAULT_VARIANT}/"
 HDF_PATH_damc-fmc2zup = "damc_fmc2zup_top.xsa"
 HDF_PATH_damc-fmc1z7io = "damc_fmc1z7io_top.xsa"
-HDF_PATH_damc-motctrl = "design_1_wrapper.xsa"
+HDF_PATH_damc-motctrl = "damc_motctrl_top.xsa"
 
 S = "${WORKDIR}"
 
