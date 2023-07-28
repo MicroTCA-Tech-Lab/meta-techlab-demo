@@ -2,7 +2,7 @@ COMPATIBLE_MACHINE = "damc-fmc1z7io|damc-fmc2zup"
 
 DESCRIPTION = "AXI DMA demo"
 LICENSE = "BSD"
-PV = "1.2.0"
+PV = "1.3.0"
 PR = "r0"
 
 DEPENDS = "boost libudmaio"
@@ -10,7 +10,7 @@ RDEPENDS_${PN} = "boost-log boost-program-options libudmaio"
 
 inherit pkgconfig cmake update-rc.d
 
-SRCREV = "dfd24a10cb6bb0fde9f576cdfe7d5677fb492480"
+SRCREV = "38d5d8a3553bac994a65823b4c8f4ef1bdcbaa10"
 SRC_URI = "git://github.com/MicroTCA-Tech-Lab/libudmaio.git;protocol=https"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=e218aa5496fc02972b9c9425e527094c"
 
