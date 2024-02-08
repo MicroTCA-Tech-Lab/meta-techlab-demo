@@ -6,8 +6,9 @@ PL_VARIANTS_DEFAULT_damc-fmc2zup = "${ZUP_FPGA_VARIANT}"
 PL_VARIANTS_DEFAULT_damc-fmc1z7io = "${Z7IO_FPGA_VARIANT}"
 
 HDF_BASE = "file://"
-# For the motion controller, do not use PL_VARIANTS, but HDF_PATH
+# For the motion controller & UNIZUP, do not use PL_VARIANTS, but HDF_PATH
 HDF_PATH_damc-motctrl = "test.xsa"
+HDF_PATH_damc-unizup = "test.xsa"
 
 S = "${WORKDIR}"
 
